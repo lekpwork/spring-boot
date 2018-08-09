@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+    <context id="ctx_cmsapp" defaultModelType="flat">
+        <!-- 避免生成的JAVA中文注释有乱码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+
+        <plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+        <!--<plugin type="com.neusoft.ofc.frm.data.mybatis.generator.MySQLPaginationPlugin" />-->
+
+        <commentGenerator>
+            <!-- 生成注释中不包含生成时间，避免SVN比对版本时影响比较 -->
+            <property name="suppressDate" value="true"/>
+            <!-- 生成注释包含表和字段的comment -->
+            <property name="addRemarkComments" value="true"/>
+            <!-- 生成注释，重新生成文件时，能够保证定定义内容不丢失并且不会重复生成 -->
+            <property name="suppressAllComments" value="false"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/cug" userId="root" password="system">
+            <!-- 保证地能够在JAVA类中生成表注释 -->
+            <property name="remarks" value="true"/>
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.example.model.data"
+                            targetProject="D:\rest\Spring-Boot-Demo\src\main\java" />
+        <sqlMapGenerator targetPackage="sqlmapper"
+                         targetProject="D:\rest\Spring-Boot-Demo\src\main\resources" />
+        <javaClientGenerator targetPackage="com.example.model.mapper"
+                             targetProject="D:\rest\Spring-Boot-Demo\src\main\java" type="XMLMAPPER" />
+        <table tableName="CQ_USER" domainObjectName="UserDO">
+        </table>
+        <!--<table tableName="OS_TENANT" domainObjectName="TenantDO">-->
+        <!--</table>-->
+        <!--<table tableName="OS_TENANT_LANG_REL" domainObjectName="TenantLangRelDO">-->
+        <!--</table>-->
+
+        <!--<table tableName="OC_CAT_LAYOUT" domainObjectName="CatLayoutDO">-->
+        <!--</table>-->
+        <!--<table tableName="OC_CAT" domainObjectName="CatDO">-->
+        <!--</table>-->
+        <!--<table tableName="OC_CAT_DETAIL" domainObjectName="CatDetailDO">-->
+        <!--</table>-->
+        <!--<table tableName="OC_TPL" domainObjectName="TplDO">-->
+        <!--</table>-->
+        <!--<table tableName="OC_CAT_TPL_INST" domainObjectName="CatTplInstDO">-->
+        <!--</table>-->
+        <!--<table tableName="OC_TPL_PROPS" domainObjectName="TplPropsDO">-->
+        <!--</table>-->
+        <!--<table tableName="OC_CAT_CONTENT" domainObjectName="CatContentDO">-->
+        <!--</table>-->
+        <!--<table tableName="OC_CAT_CONTENT_DATA" domainObjectName="CatContentDataDO">-->
+        <!--</table>-->
+
+        <!--<table tableName="OC_SITE" domainObjectName="SiteDO">-->
+        <!--</table>-->
+        <!--<table tableName="OC_SITE_ACCEPT_PORTAL" domainObjectName="SiteAcceptPortalDO">-->
+        <!--</table>-->
+        <!--<table tableName="OC_SITE_DETAIL" domainObjectName="SiteDetailDO">-->
+        <!--</table>-->
+
+
+    </context>
+
+</generatorConfiguration>
