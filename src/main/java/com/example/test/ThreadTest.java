@@ -32,6 +32,8 @@ public class ThreadTest implements Runnable{
     }
 
     public static void main(String[] args) {
+        LogUtil.debug("");
+        /////////////////
         ThreadTest t1=new ThreadTest("t1");
         t1.start();
         ThreadTest t2=new ThreadTest("t2");
