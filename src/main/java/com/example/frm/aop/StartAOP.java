@@ -24,6 +24,7 @@ public class StartAOP {
     @Around("@annotation(org.springframework.web.bind.annotation.GetMapping)")
     public Object doLog(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         LogUtil.debug("欢迎进入aop");
+        System.out.println(12312312);
         MethodSignature methodSignature =(MethodSignature)proceedingJoinPoint.getSignature();
         Method method=methodSignature.getMethod();
         if (method.isAnnotationPresent(TestAOP.class)){

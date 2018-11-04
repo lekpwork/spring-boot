@@ -35,13 +35,12 @@ spring:
       max-wait: 5000
       #指定update是否自动提交
       default-auto-commit: true
-  redis:
-    database: 5
-    host: 10.4.126.72
-    port: 7001
-    timeout: 3000s
+#  redis:
+#    database: 5
+#    host: 10.4.126.72
+#    port: 7001
+#    timeout: 3000s
     # 连接池中的最大空闲连接，默认值也是8。
-    pool.
 mybatis:
   #扫描mapper.xml
   mapper-locations: classpath:sqlmapper/*.xml

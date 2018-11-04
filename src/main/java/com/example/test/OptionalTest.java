@@ -11,5 +11,10 @@ package com.example.test;
 public class OptionalTest {
     public static void main(String[] args) {
 
+        try {
+
+        }catch (Exception e){
+            e
+        }
     }
 }

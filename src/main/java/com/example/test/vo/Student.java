@@ -8,7 +8,7 @@ package com.example.test.vo;
  * @author lekp
  * @since 1.0
  */
-public class Student {
+public class Student implements Comparable<Student>{
     private String name;
     private String age;
 
@@ -34,5 +34,19 @@ public class Student {
                 "name='" + name + '\'' +
                 ", age='" + age + '\'' +
                 '}';
+    }
+
+    public Student(String name, String age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        if (Integer.valueOf(this.age)>Integer.valueOf(o.getAge())){
+            return 1;
+        }else {
+            return -1;
+        }
     }
 }

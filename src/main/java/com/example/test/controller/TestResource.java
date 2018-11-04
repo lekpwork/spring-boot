@@ -43,17 +43,17 @@ public class TestResource extends BaseController{
         System.out.println(people.getAge());
         System.out.println(people.getSex());
         System.out.println(people.getName());
-        UserDO userDO=userDOMapper.selectByPrimaryKey(2);
+        UserDO userDO=userDOMapper.selectByPrimaryKey(76);
         LogUtil.debug(userDO.getEmail());
         LogUtil.debug("结束--------------");
     }
 
-    @GetMapping("/getPeople")
-    public OfcResponse getPeople(){
-        OfcResponse ofcResponse=new OfcResponse();
-        Student student=new Student();
-        student.setName("lkp");
-        student.setAge("1");
-        return ofcResponse.success(student);
-    }
+//    @GetMapping("/getPeople")
+//    public OfcResponse getPeople(){
+//        OfcResponse ofcResponse=new OfcResponse();
+//        Student student=new Student();
+//        student.setName("lkp");
+//        student.setAge("1");
+//        return ofcResponse.success(student);
+//    }
 }
